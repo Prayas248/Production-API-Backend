@@ -1,0 +1,26 @@
+{
+  "name": "production-api-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  
+  "scripts": {
+    "dev": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prayas248/Production-API-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Prayas248/Production-API-Backend/issues"
+  },
+  "homepage": "https://github.com/Prayas248/Production-API-Backend#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  }
+}
