@@ -4,6 +4,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import authRoutes from './routes/auth.routes.js';
+
 const app = express();
 
 app.use(helmet());
@@ -21,5 +23,7 @@ app.get('/', (req, res) => {
   logger.info('Hello from the dev(bablu)!')
   res.status(200).send('Hello, World!');
 });
+
+app.use('/api/auth', authRoutes);
 
 export default app;
