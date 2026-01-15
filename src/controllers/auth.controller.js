@@ -5,7 +5,7 @@ import { createUser, authenticateUser } from '../services/auth.service.js';
 import { jwttoken } from '../utils/jwt.js';
 import { cookies } from '../utils/cookies.js';
 
-//Signup controller
+// Signup controller
 export const signup = async (req, res, next) => {
     try{
         const validationResult = signupSchema.safeParse(req.body);
@@ -16,7 +16,7 @@ export const signup = async (req, res, next) => {
         
         const { email, password, name, role } = validationResult.data;
 
-        //Auth service call
+        // Auth service call
         const newUser = await createUser(name, email, password, role);
         const token = jwttoken.sign({ id: newUser.id, email: newUser.email, role: newUser.role });
         cookies.set(res,'token',token);
@@ -47,7 +47,7 @@ export const signup = async (req, res, next) => {
 
 
 
-//Signin controller
+// Signin controller
 export const signin = async (req, res, next) => {
     try{
         const validationResult = signinSchema.safeParse(req.body);
@@ -77,6 +77,22 @@ export const signin = async (req, res, next) => {
     }
     catch(e){
         logger.error('Error during user signin', e);
+        next(e);
+    }
+}
+
+
+
+// Signout controller
+export const signout = async (req, res, next) => {
+    try{
+        cookies.clear(res,'token');
+
+        logger.info('User signed out successfully');
+        return res.status(200).json({ message: 'User signed out successfully' });
+    }
+    catch(e){
+        logger.error('Error during user signout', e);
         next(e);
     }
 }
