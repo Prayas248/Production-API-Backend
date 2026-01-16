@@ -9,3 +9,8 @@
 {"email":"prayasyadav248@gmail.com","level":"info","message":"User created successfully","service":"user-service","timestamp":"2025-12-31T15:20:24.507Z"}
 {"email":"prayasyadav248@gmail.com","level":"info","message":"User signed up successfully","service":"user-service","timestamp":"2025-12-31T15:20:24.606Z"}
 {"level":"info","message":"::1 - - [31/Dec/2025:15:20:24 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 126 \"-\" \"PostmanRuntime/7.44.0\"","service":"user-service","timestamp":"2025-12-31T15:20:24.645Z"}
+{"level":"info","message":"::1 - - [15/Jan/2026:23:42:45 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 92 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-15T23:42:45.263Z"}
+{"email":"prayasyadav248@gmail.com","level":"info","message":"User found by email","service":"user-service","timestamp":"2026-01-15T23:44:02.048Z"}
+{"email":"prayasyadav248@gmail.com","level":"info","message":"Password matched for user","service":"user-service","timestamp":"2026-01-15T23:44:02.143Z"}
+{"email":"prayasyadav248@gmail.com","level":"info","message":"User signed in successfully","service":"user-service","timestamp":"2026-01-15T23:44:02.157Z"}
+{"level":"info","message":"::1 - - [15/Jan/2026:23:44:02 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 128 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-15T23:44:02.164Z"}
