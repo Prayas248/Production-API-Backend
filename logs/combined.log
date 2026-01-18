@@ -14,3 +14,24 @@
 {"email":"prayasyadav248@gmail.com","level":"info","message":"Password matched for user","service":"user-service","timestamp":"2026-01-15T23:44:02.143Z"}
 {"email":"prayasyadav248@gmail.com","level":"info","message":"User signed in successfully","service":"user-service","timestamp":"2026-01-15T23:44:02.157Z"}
 {"level":"info","message":"::1 - - [15/Jan/2026:23:44:02 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 128 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-15T23:44:02.164Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:04:26.078Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:04:26 +0000] \"POST /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:04:26.093Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:04:27.902Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:04:27 +0000] \"POST /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:04:27.905Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:04:50.916Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:04:50 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:04:50.918Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:04:52.574Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:04:52 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:04:52.577Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:05:32.938Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:05:32 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:05:32.941Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/api/auth/sign-in","service":"user-service","timestamp":"2026-01-16T01:05:40.409Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:05:40 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:05:40.411Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/api/auth/sign-in","service":"user-service","timestamp":"2026-01-16T01:08:00.336Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:08:00 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:08:00.346Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:08:03.249Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:08:03 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:08:03.252Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocker","path":"/health","service":"user-service","timestamp":"2026-01-16T01:08:04.254Z","userAgent":"PostmanRuntime/7.51.0"}
+{"level":"info","message":"::1 - - [16/Jan/2026:01:08:04 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"PostmanRuntime/7.51.0\"","service":"user-service","timestamp":"2026-01-16T01:08:04.256Z"}
+{"level":"info","message":"Hello from the dev(bablu)!","service":"user-service","timestamp":"2026-01-18T11:48:41.447Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:11:48:41 +0000] \"GET / HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"user-service","timestamp":"2026-01-18T11:48:41.457Z"}
+{"level":"info","message":"::1 - - [18/Jan/2026:11:48:42 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"user-service","timestamp":"2026-01-18T11:48:42.063Z"}

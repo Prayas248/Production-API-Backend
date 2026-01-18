@@ -21,6 +21,10 @@ app.use(morgan('combined', {
 }));
 app.use(securityMiddleware);
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/', (req, res) => {
   logger.info('Hello from the dev(bablu)!')
   res.status(200).send('Hello, World!');

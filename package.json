@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start":"node src/index.js",
     "dev": "node --watch src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev:docker": "bash setup-docker.sh"
   },
   "repository": {
     "type": "git",
