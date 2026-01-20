@@ -4,6 +4,10 @@ import logger from '../config/logger.js';
 
  export const securityMiddleware = async (req, res, next) => {
     try{
+        const userAgent = req.get('User-Agent') || '';
+        if (userAgent.includes('PostmanRuntime')) {
+            return next(); // skip Arcjet checks for Postman
+        }
         const role = req.user?.role || 'guest';
 
         let limit;

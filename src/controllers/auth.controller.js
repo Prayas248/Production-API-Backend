@@ -4,6 +4,20 @@ import { formatValidationError } from '../utils/format.js';
 import { createUser, authenticateUser } from '../services/auth.service.js';
 import { jwttoken } from '../utils/jwt.js';
 import { cookies } from '../utils/cookies.js';
+import { createUsersTable } from '../models/user.model.js';
+
+
+// Create Table
+
+export const createTable = async (req, res) => {
+  try {
+    await createUsersTable();
+    return res.status(200).json({ message: "Users table created successfully" });
+  } catch (err) {
+    return res.status(500).json({ error: "Failed to create table", details: err.message });
+  }
+};
+
 
 // Signup controller
 export const signup = async (req, res, next) => {
