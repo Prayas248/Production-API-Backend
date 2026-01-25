@@ -1,23 +1,28 @@
 import js from '@eslint/js';
 
+const baseGlobals = {
+  console: 'readonly',
+  process: 'readonly',
+  Buffer: 'readonly',
+  __dirname: 'readonly',
+  __filename: 'readonly',
+  URL: 'readonly',
+  setTimeout: 'readonly',
+  clearTimeout: 'readonly',
+  setInterval: 'readonly',
+  clearInterval: 'readonly',
+};
+
 export default [
+  // Base recommended rules
   js.configs.recommended,
+
+  // Base project config
   {
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        URL: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-      },
+      globals: baseGlobals,
     },
     rules: {
       indent: ['error', 2, { SwitchCase: 1 }],
@@ -32,10 +37,13 @@ export default [
       'prefer-arrow-callback': 'error',
     },
   },
+
+  // Jest test files
   {
-    files: ['tests/**/*.js'],
+    files: ['src/tests/**/*.js'],
     languageOptions: {
       globals: {
+        ...baseGlobals,
         describe: 'readonly',
         it: 'readonly',
         expect: 'readonly',
@@ -47,6 +55,8 @@ export default [
       },
     },
   },
+
+  // Ignored paths
   {
     ignores: ['node_modules/**', 'coverage/**', 'logs/**', 'drizzle/**'],
   },

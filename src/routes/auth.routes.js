@@ -9,6 +9,6 @@ router.post('/sign-in',signin);
 
 router.post('/sign-out',signout);
 
-router.post("/create-table", createTable);
+router.post('/create-table', createTable);
 
 export default router;

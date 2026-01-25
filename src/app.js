@@ -23,7 +23,7 @@ app.use(securityMiddleware);
 
 
 app.get('/', (req, res) => {
-  logger.info('Hello from the dev(bablu)!')
+  logger.info('Hello from the dev(bablu)!');
   res.status(200).send('Hello, World!');
 });
 

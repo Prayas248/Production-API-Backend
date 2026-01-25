@@ -1,10 +1,10 @@
-import pg from "pg";
-import dotenv from "dotenv";
+import pg from 'pg';
+import dotenv from 'dotenv';
 
 dotenv.config();
 const { Pool } = pg;
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 
 const pool = new Pool({
   host: process.env.DB_HOST,
@@ -24,10 +24,10 @@ const pool = new Pool({
 
 export const connectDB = async () => {
   try {
-    await pool.query("SELECT 1");
-    console.log("PostgreSQL connected");
+    await pool.query('SELECT 1');
+    console.log('PostgreSQL connected');
   } catch (error) {
-    console.error("PostgreSQL connection failed");
+    console.error('PostgreSQL connection failed');
     console.error(error);
     process.exit(1);
   }
