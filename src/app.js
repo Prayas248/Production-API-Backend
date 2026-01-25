@@ -21,16 +21,37 @@ app.use(morgan('combined', {
 }));
 app.use(securityMiddleware);
 
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
-});
 
 app.get('/', (req, res) => {
   logger.info('Hello from the dev(bablu)!')
   res.status(200).send('Hello, World!');
 });
 
+
+app.get('/health', (req, res) => {
+  res
+    .status(200)
+    .json({
+      status: 'OK',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+    });
+});
+
+app.get('/api', (req, res) => {
+  res.status(200).json({ message: 'API is running!' });
+});
+
+
+
+
 app.use('/api/auth', authRoutes);
 app.use('/api/users', authRoutes);
+
+
+app.use((req,res)=>{
+  res.status(404).send({error: 'Route not found'});
+});
+
 
 export default app;

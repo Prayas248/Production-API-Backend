@@ -35,3 +35,12 @@
 {"level":"info","message":"Hello from the dev(bablu)!","service":"user-service","timestamp":"2026-01-18T11:48:41.447Z"}
 {"level":"info","message":"::1 - - [18/Jan/2026:11:48:41 +0000] \"GET / HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"user-service","timestamp":"2026-01-18T11:48:41.457Z"}
 {"level":"info","message":"::1 - - [18/Jan/2026:11:48:42 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"user-service","timestamp":"2026-01-18T11:48:42.063Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:37:22 +0000] \"GET /health HTTP/1.1\" 200 2 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:37:22.036Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:37:22 +0000] \"GET /api HTTP/1.1\" 200 15 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:37:22.126Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:37:22 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:37:22.312Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:44:43 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:44:43.977Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:44:44 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:44:44.011Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:44:44 +0000] \"GET /nonexistent HTTP/1.1\" 404 29 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:44:44.026Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:56:15 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:56:16.001Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:56:16 +0000] \"GET /api HTTP/1.1\" 200 29 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:56:16.035Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/Jan/2026:01:56:16 +0000] \"GET /nonexistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"user-service","timestamp":"2026-01-25T01:56:16.049Z"}

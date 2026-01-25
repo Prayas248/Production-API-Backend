@@ -3,6 +3,9 @@ import aj from '../config/arcjet.js';
 import logger from '../config/logger.js';
 
  export const securityMiddleware = async (req, res, next) => {
+      if (process.env.NODE_ENV === 'test') {
+        return next();
+      }
     try{
         const userAgent = req.get('User-Agent') || '';
         if (userAgent.includes('PostmanRuntime')) {
