@@ -23,7 +23,7 @@ export const getAllUsers = async () => {
 /**
  * Get user by ID
  */
-export const getUserById = async (id) => {
+export const getUserById = async id => {
   try {
     const query = `
       SELECT id, name, email, role, created_at, updated_at
@@ -76,12 +76,7 @@ export const updateUser = async (id, updates) => {
       RETURNING id, name, email, role, created_at, updated_at
     `;
 
-    const values = [
-      updates.name,
-      updates.email,
-      updates.role,
-      id
-    ];
+    const values = [updates.name, updates.email, updates.role, id];
 
     const { rows } = await pool.query(query, values);
 
@@ -96,7 +91,7 @@ export const updateUser = async (id, updates) => {
 /**
  * Delete user
  */
-export const deleteUser = async (id) => {
+export const deleteUser = async id => {
   try {
     const query = `
       DELETE FROM users

@@ -13,9 +13,7 @@ const pool = new Pool({
   password: String(process.env.DB_PASSWORD),
   database: process.env.DB_NAME,
 
-  ssl: isProduction
-    ? { rejectUnauthorized: false }
-    : false,
+  ssl: isProduction ? { rejectUnauthorized: false } : false,
 
   max: 10,
   idleTimeoutMillis: 30000,

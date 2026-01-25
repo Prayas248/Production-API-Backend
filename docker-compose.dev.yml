@@ -1,4 +1,3 @@
-
 services:
   # Local PostgreSQL Database (Development)
   postgres:
