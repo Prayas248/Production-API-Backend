@@ -9,7 +9,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "dev:docker": "bash setup-docker.sh",
+    "dev:docker": "bash development-docker.sh",
+    "prod:docker": "bash production-docker.sh",
     "test": "cross-env NODE_ENV=test ARCJET_ENV=development NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "repository": {

@@ -1,15 +1,21 @@
-// src/config/database.js
 import pg from "pg";
 import dotenv from "dotenv";
+
 dotenv.config();
 const { Pool } = pg;
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const pool = new Pool({
   host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
+  port: Number(process.env.DB_PORT),
   user: process.env.DB_USER,
   password: String(process.env.DB_PASSWORD),
   database: process.env.DB_NAME,
+
+  ssl: isProduction
+    ? { rejectUnauthorized: false }
+    : false,
 
   max: 10,
   idleTimeoutMillis: 30000,
