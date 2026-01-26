@@ -16,7 +16,6 @@ A production-ready Node.js backend application built with Express.js, featuring 
 - [Docker Support](#docker-support)
 - [CI/CD Pipeline](#cicd-pipeline)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -367,7 +366,7 @@ The project includes automated GitHub Actions workflows:
 
 ## Contributing
 
-We welcome contributions from the community! Please follow these guidelines:
+Contributions from the community are welcomed! Please follow these guidelines:
 
 ### Development Process
 1. Fork the repository
@@ -394,16 +393,6 @@ We welcome contributions from the community! Please follow these guidelines:
 - [ ] Documentation updated
 - [ ] No breaking changes (or clearly documented)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### MIT License Summary
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-- ❌ Liability
-- ❌ Warranty
 
 ---
