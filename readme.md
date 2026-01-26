@@ -24,6 +24,7 @@ This Node.js backend application provides a robust foundation for building scala
 **Problem Solved:** Eliminates the need to build authentication and security infrastructure from scratch, providing developers with a production-ready backend that can be quickly customized for specific business requirements.
 
 **Key Benefits:**
+
 - Secure user authentication and authorization
 - Production-ready security middleware
 - Comprehensive test coverage
@@ -107,6 +108,7 @@ Node-Production-Backend/
 ## Features
 
 ### Core Functionality
+
 - User registration and authentication
 - JWT-based session management
 - Password encryption with bcrypt
@@ -114,6 +116,7 @@ Node-Production-Backend/
 - Input validation and sanitization
 
 ### Security Features
+
 - Rate limiting and DDoS protection
 - CORS configuration
 - Security headers (Helmet.js)
@@ -123,6 +126,7 @@ Node-Production-Backend/
 - XSS protection
 
 ### Development & Operations
+
 - Comprehensive test suite with Jest
 - Code coverage reporting
 - ESLint code quality checks
@@ -134,62 +138,67 @@ Node-Production-Backend/
 
 ## Tech Stack
 
-| Category | Technology | Purpose |
-|----------|------------|---------|
-| **Runtime** | Node.js | JavaScript runtime environment |
-| **Framework** | Express.js | Web application framework |
-| **Database** | PostgreSQL | Relational database |
-| **Deployment** | Supabase | Managed PostgreSQL & backend platform |
-| **Authentication** | JWT | JSON Web Token authentication |
-| **Security** | Arcjet, Helmet | Request protection & secure HTTP headers |
-| **Testing** | Jest | JavaScript testing framework |
-| **Code Quality** | ESLint, Prettier | Linting and formatting |
-| **Containerization** | Docker | Application containerization |
-| **CI/CD** | GitHub Actions | Automated CI/CD workflows |
-| **Logging** | Winston | Structured application logging |
-
+| Category             | Technology       | Purpose                                  |
+| -------------------- | ---------------- | ---------------------------------------- |
+| **Runtime**          | Node.js          | JavaScript runtime environment           |
+| **Framework**        | Express.js       | Web application framework                |
+| **Database**         | PostgreSQL       | Relational database                      |
+| **Deployment**       | Supabase         | Managed PostgreSQL & backend platform    |
+| **Authentication**   | JWT              | JSON Web Token authentication            |
+| **Security**         | Arcjet, Helmet   | Request protection & secure HTTP headers |
+| **Testing**          | Jest             | JavaScript testing framework             |
+| **Code Quality**     | ESLint, Prettier | Linting and formatting                   |
+| **Containerization** | Docker           | Application containerization             |
+| **CI/CD**            | GitHub Actions   | Automated CI/CD workflows                |
+| **Logging**          | Winston          | Structured application logging           |
 
 ## Installation & Setup
 
 ### Prerequisites
+
 - Node.js (v18.0.0 or higher, v20 recommended)
 - npm (v9.0.0 or higher)
 - PostgreSQL (local instance **or** Supabase-managed database)
 - Docker (for containerized development and production)
 
-
 ### Local Development Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/pranjalirathi/DSAF.git
    cd Node-Production-Backend
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp .env.example .env
    ```
+
    Edit `.env` file with your configuration values.
 
 4. **Set up PostgreSQL / Supabase**
 
    You can use either a local PostgreSQL instance or Supabase (recommended).
 
-   **Option A: Using Supabase (Recommended)**  
+   **Option A: Using Supabase (Recommended)**
    - Create a new project on https://supabase.com
    - Copy the PostgreSQL connection string
    - Add it to your `.env` file:
 
    ```env
 
+   ```
 
 5. **Run the application**
+
    ```bash
    # Development mode with hot reload
    npm run dev
@@ -201,6 +210,7 @@ Node-Production-Backend/
 ### Docker Setup
 
 1. **Development environment**
+
    ```bash
    chmod +x development-docker.sh
    ./development-docker.sh
@@ -279,20 +289,20 @@ ARCJET_KEY=your-arcjet-api-key
 
 ### Health & Base Endpoints
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| GET | `/health` | Application health check | No |
-| GET | `/api` | API status message | No |
+| Method | Endpoint  | Description              | Auth Required |
+| ------ | --------- | ------------------------ | ------------- |
+| GET    | `/health` | Application health check | No            |
+| GET    | `/api`    | API status message       | No            |
 
 ---
 
 ### Authentication Endpoints
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| POST | `/api/auth/sign-up` | Register a new user | No |
-| POST | `/api/auth/sign-in` | Authenticate user and issue JWT | No |
-| POST | `/api/auth/sign-out` | Sign out the authenticated user | Yes |
+| Method | Endpoint             | Description                     | Auth Required |
+| ------ | -------------------- | ------------------------------- | ------------- |
+| POST   | `/api/auth/sign-up`  | Register a new user             | No            |
+| POST   | `/api/auth/sign-in`  | Authenticate user and issue JWT | No            |
+| POST   | `/api/auth/sign-out` | Sign out the authenticated user | Yes           |
 
 > Authentication is implemented using **JWT-based stateless tokens**.
 
@@ -300,24 +310,25 @@ ARCJET_KEY=your-arcjet-api-key
 
 ### User Management Endpoints
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| GET | `/api/users` | Get all users | Yes |
-| GET | `/api/users/:id` | Get user by ID | Yes |
-| PUT | `/api/users/:id` | Update user by ID | Yes |
+| Method | Endpoint         | Description       | Auth Required    |
+| ------ | ---------------- | ----------------- | ---------------- |
+| GET    | `/api/users`     | Get all users     | Yes              |
+| GET    | `/api/users/:id` | Get user by ID    | Yes              |
+| PUT    | `/api/users/:id` | Update user by ID | Yes              |
 | DELETE | `/api/users/:id` | Delete user by ID | Yes (Admin only) |
-
 
 ## Testing
 
 The project includes comprehensive testing with Jest:
 
 ### Test Structure
+
 - **Unit Tests**: Individual function and module testing
 - **Integration Tests**: API endpoint testing
 - **Coverage Reports**: Automated coverage tracking
 
 ### Coverage Goals
+
 - Minimum 80% code coverage
 - All critical paths tested
 - Edge cases covered
@@ -325,12 +336,14 @@ The project includes comprehensive testing with Jest:
 ## Docker Support
 
 ### Development Container
+
 ```bash
 # Start development environment using Docker
 npm run dev:docker
 ```
 
 ### Production Container
+
 ```bash
 # Start production environment using Docker
 npm run prod:docker
@@ -344,6 +357,7 @@ docker-compose -f docker-compose.prod.yml logs -f
 The project includes automated GitHub Actions workflows:
 
 ### Workflows
+
 1. **Code Quality** (`lint-and-format.yml`)
    - ESLint code quality checks
    - Prettier formatting validation
@@ -360,6 +374,7 @@ The project includes automated GitHub Actions workflows:
    - Production deployment
 
 ### Trigger Events
+
 - Push to main branch
 - Pull request creation
 - Manual workflow dispatch
@@ -369,6 +384,7 @@ The project includes automated GitHub Actions workflows:
 Contributions from the community are welcomed! Please follow these guidelines:
 
 ### Development Process
+
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/your-feature-name`
 3. Make your changes following our coding standards
@@ -380,6 +396,7 @@ Contributions from the community are welcomed! Please follow these guidelines:
 9. Submit a pull request
 
 ### Code Standards
+
 - Follow ESLint configuration
 - Maintain test coverage above 80%
 - Write meaningful commit messages
@@ -387,12 +404,11 @@ Contributions from the community are welcomed! Please follow these guidelines:
 - Follow semantic versioning for releases
 
 ### Pull Request Requirements
+
 - [ ] Code follows project style guidelines
 - [ ] Tests pass locally
 - [ ] New tests added for new functionality
 - [ ] Documentation updated
 - [ ] No breaking changes (or clearly documented)
-
-
 
 ---
